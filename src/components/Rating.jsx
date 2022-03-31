@@ -6,6 +6,7 @@ export default function Rating({selected,ratingEdit}) {
     setRatingSelect(+e.currentTarget.value)
     selected(+e.currentTarget.value)
   }
+  //handle side effect to edit rating by clicking edit button
   useEffect(()=>{
     setRatingSelect(ratingEdit.item.rating)
   },[ratingEdit])

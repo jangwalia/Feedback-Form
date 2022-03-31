@@ -74,7 +74,9 @@ header {
   border: 1px #eee solid;
   transition: 0.3s;
 }
-
+.about{
+  color: #ccc;
+}
 .rating li label {
   position: absolute;
   top: 50%;

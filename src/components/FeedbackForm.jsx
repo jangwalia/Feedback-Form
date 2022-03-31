@@ -8,6 +8,7 @@ export default function FeedbackForm({handleAddFeedback,editStatus,handleEditSub
   const[btnDisabled,setBtnDisabled] = useState(true)
   const[message,setMessage] = useState('')
   const [rating,setRating] = useState(5)
+  //form submit handler
   const handleSubmit = (e) =>{
     e.preventDefault()
     if(text.trim().length > 10){
@@ -25,6 +26,7 @@ export default function FeedbackForm({handleAddFeedback,editStatus,handleEditSub
     
   }
   }
+  //on input change
   const handleChange = (e)=>{
     if(text === ''){
       setBtnDisabled(true)
@@ -39,6 +41,7 @@ export default function FeedbackForm({handleAddFeedback,editStatus,handleEditSub
     setText(e.target.value)
     
   }
+  //to handle sideeffect to set form values by clicking edit button
   useEffect(()=>{
     if(editStatus.edit === true){
       setBtnDisabled(false)
