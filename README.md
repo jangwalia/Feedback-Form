@@ -17,5 +17,3 @@
 - Handling Events
 - Lists & Keys
 - Forms
-- Context API
-- HTTP Requests
