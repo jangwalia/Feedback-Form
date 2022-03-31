@@ -1,11 +1,14 @@
 import React from 'react'
-import { useState } from 'react'
-export default function Rating({selected}) {
+import { useState,useEffect } from 'react'
+export default function Rating({selected,ratingEdit}) {
   const [ratingSelect,setRatingSelect] = useState(5)
   const handleChange = (e) =>{
     setRatingSelect(+e.currentTarget.value)
     selected(+e.currentTarget.value)
   }
+  useEffect(()=>{
+    setRatingSelect(ratingEdit.item.rating)
+  },[ratingEdit])
   return (
     <ul className='rating'>
     {Array.from({ length: 5 }, (_, i) => (

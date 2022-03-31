@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion,AnimatePresence} from 'framer-motion'
 import FeedBackItem from './FeedBackItem'
-export default function FeedbackList({feedBack,removeItem}) {
+export default function FeedbackList({feedBack,removeItem,editItem}) {
   return (
     <div className= "feedback-list">
       <AnimatePresence>
@@ -12,7 +12,7 @@ export default function FeedbackList({feedBack,removeItem}) {
           animate={{opacity: 1}}
           exit={{opacity:0}}
       >
-            <FeedBackItem handleClick={removeItem} id = {item.id} key = {item.id} text = {item.text} rating = {item.rating}/>
+            <FeedBackItem handleEdit={editItem} handleClick={removeItem} item={item}/>
          
         </motion.div>
         ))}
