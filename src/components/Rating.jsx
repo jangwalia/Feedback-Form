@@ -12,6 +12,7 @@ export default function Rating({selected,ratingEdit}) {
   },[ratingEdit])
   return (
     <ul className='rating'>
+  //creating array of listitems where ech list item is radio button
     {Array.from({ length: 5 }, (_, i) => (
       <li key={`rating-${i + 1}`}>
         <input
