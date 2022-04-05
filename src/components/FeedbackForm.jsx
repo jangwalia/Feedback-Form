@@ -55,6 +55,8 @@ export default function FeedbackForm({handleAddFeedback,editStatus,handleEditSub
       <form onSubmit={handleSubmit}>
         <Rating ratingEdit = {editStatus} selected={(rating)=>setRating(rating)}/>
         <div className="input-group">
+          //use onChange method on input when user will type anything
+          //the Onchange method will be triggered
           <input value = {text} onChange={handleChange} type="text" placeholder="write a review" />
           <Button isDisabled = {btnDisabled} type="submit">Send</Button>
         </div>
