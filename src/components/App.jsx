@@ -56,7 +56,9 @@ function App() {
                     handleAddFeedback={AddFeedBack}
                     handleEditSubmission={addEditFeedback}
                   />
-                  <Link className="about" to="/about">About US</Link>
+                  <Link className="about" to="/about">
+                    About US
+                  </Link>
                   <FeedBackStats data={feedBack} />
                   <FeedbackList
                     editItem={editFeedBack}
