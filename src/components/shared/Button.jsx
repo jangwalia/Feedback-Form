@@ -2,6 +2,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
 export default function Button({children,type,version,isDisabled}) {
+  //Button component that can be shared with 
+  //other componets
   return (
     <button type = {type} disabled = {isDisabled} className = {`btn btn-${version}`} >
       {children}
