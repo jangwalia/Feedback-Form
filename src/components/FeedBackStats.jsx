@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function FeedBackStats({data}) {
+  //component to show the average rating and number of reviews 
+  // available
   let average = data.reduce((acc,curr)=>{
     return (acc + curr.rating)/data.length
   },0)
